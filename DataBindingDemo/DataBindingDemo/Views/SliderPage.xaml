@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DataBindingDemo.Views.SliderPage">
+
+    <StackLayout Padding="20">
+        <Label
+            Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='The slider value is {0:F2}'}"
+            FontSize="80"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand"
+            BindingContext="{x:Reference Name=slider}"
+            Rotation="{Binding Source={x:Reference slider}, Path=Value}"
+            BackgroundColor="LightBlue" />
+        <Slider
+            x:Name="slider"
+            Maximum="360"
+            VerticalOptions="CenterAndExpand"
+            ThumbColor="Blue"
+            BackgroundColor="LightGray"
+            MinimumTrackColor="Green"
+            MaximumTrackColor="Red" />
+    </StackLayout>
+</ContentPage>
