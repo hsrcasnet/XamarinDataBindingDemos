@@ -7,16 +7,9 @@ namespace DataBindingDemo
     {
         public App()
         {
-            InitializeComponent();
+            this.InitializeComponent();
 
-            // DEMO Data Binding Basics
-            MainPage = new NavigationPage(new LoginPage());
-
-            // DEMO Relative Bindings
-            //MainPage = new NavigationPage(new SliderPage());
-
-            // DEMO Collection Bindings
-            //MainPage = new NavigationPage(new CarsListPage());
+            this.MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

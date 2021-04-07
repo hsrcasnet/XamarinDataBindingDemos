@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DataBindingDemo.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="DataBindingDemo">
+
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+
+        <!--  Demo 1: Data Binding Basics  -->
+        <Button
+            Command="{Binding NavigateToPageCommand}"
+            CommandParameter="LoginPage"
+            Text="Demo 1: Data Binding Basics" />
+
+        <!--  Demo 2: Relative Bindings  -->
+        <Button
+            Command="{Binding NavigateToPageCommand}"
+            CommandParameter="SliderPage"
+            Text="Demo 2: Relative Bindings" />
+
+        <!--  Demo 3: Collection Bindings  -->
+        <Button
+            Command="{Binding NavigateToPageCommand}"
+            CommandParameter="CarsListPage"
+            Text="Demo 3: Collection Bindings" />
+    </StackLayout>
+</ContentPage>

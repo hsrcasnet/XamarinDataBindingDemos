@@ -1,5 +1,4 @@
-﻿
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace DataBindingDemo.Views
@@ -9,7 +8,7 @@ namespace DataBindingDemo.Views
     {
         public SliderPage()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }

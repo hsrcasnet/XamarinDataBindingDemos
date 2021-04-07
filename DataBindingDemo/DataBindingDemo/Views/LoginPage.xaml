@@ -1,25 +1,35 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
+    x:Class="DataBindingDemo.Views.LoginPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="DataBindingDemo.Views.LoginPage"
-    Title="Welcome to Xamarin Forms"
+    Title="LoginPage"
     Padding="20">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Sign Up" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center">
+
             <Label Text="Username" />
             <Entry Placeholder="Username" Text="{Binding Username, Mode=TwoWay}" />
+
             <Label Text="Password" />
             <Entry
+                IsPassword="true"
                 Placeholder="Password"
-                Text="{Binding Password, Mode=TwoWay}"
-                IsPassword="true" />
-            <Label Text="Accept Terms and Conditions?" />
-            <CheckBox x:Name="CheckBoxTermsAndConditions" IsChecked="{Binding AcceptTermsAndConditions, Mode=TwoWay}" />
-            <Button Text="Login" IsEnabled="{Binding AcceptTermsAndConditions}" />
+                Text="{Binding Password, Mode=TwoWay}" />
+
+            <StackLayout Orientation="Horizontal">
+                <CheckBox IsChecked="{Binding AcceptTermsAndConditions, Mode=TwoWay}" VerticalOptions="Center" />
+                <Label Text="Accept Terms and Conditions?" VerticalOptions="Center" />
+            </StackLayout>
+
+            <Button
+                Command="{Binding LoginCommand}"
+                CommandParameter="test"
+                IsEnabled="{Binding IsLoginButtonEnabled}"
+                Text="Login" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -3,11 +3,13 @@ using DataBindingDemo.Model;
 
 namespace DataBindingDemo.ViewModels
 {
-    public class CarsListViewModel
+    public class SimpleCarsViewModel
     {
+        public string Title { get; } = "Simple Cars";
+
         public ObservableCollection<Car> Cars { get; set; }
 
-        public CarsListViewModel()
+        public SimpleCarsViewModel()
         {
             this.Cars = new ObservableCollection<Car>
             {
@@ -23,6 +25,5 @@ namespace DataBindingDemo.ViewModels
                 },
             };
         }
-
     }
 }

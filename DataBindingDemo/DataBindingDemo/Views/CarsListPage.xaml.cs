@@ -1,5 +1,4 @@
 ﻿using DataBindingDemo.Model;
-using DataBindingDemo.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +10,6 @@ namespace DataBindingDemo.Views
         public CarsListPage()
         {
             this.InitializeComponent();
-            this.BindingContext = new CarsListViewModel();
         }
 
         private async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)

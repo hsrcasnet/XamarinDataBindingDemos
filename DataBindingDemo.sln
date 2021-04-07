@@ -7,7 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBindingDemo.Android", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBindingDemo.iOS", "DataBindingDemo\DataBindingDemo.iOS\DataBindingDemo.iOS.csproj", "{54D4D74A-C541-4A14-A535-5A00893E0338}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBindingDemo", "DataBindingDemo\DataBindingDemo\DataBindingDemo.csproj", "{3ACD827C-3AAF-4D46-A132-5892DDB1DDF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBindingDemo", "DataBindingDemo\DataBindingDemo\DataBindingDemo.csproj", "{3ACD827C-3AAF-4D46-A132-5892DDB1DDF1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{04F8A54D-9FD1-49E5-B458-56067D770341}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		clean.bat = clean.bat
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -9,7 +9,7 @@ namespace DataBindingDemo.Views
     {
         public LoginPage()
         {
-            InitializeComponent();
+            this.InitializeComponent();
             this.BindingContext = new LoginViewModel();
         }
     }

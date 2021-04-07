@@ -1,34 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
+    x:Class="DataBindingDemo.Views.CarsListPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="DataBindingDemo.Views.CarsListPage">
+    Title="{Binding Title}">
 
     <StackLayout>
         <ListView
-            ItemsSource="{Binding Cars}"
-            ItemTapped="Handle_ItemTapped"
             CachingStrategy="RetainElement"
-            HasUnevenRows="True">
+            HasUnevenRows="True"
+            ItemTapped="Handle_ItemTapped"
+            ItemsSource="{Binding Cars}">
 
             <!--  Demo: Use built-in cells, e.g. TextCell  -->
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Brand}" Detail="{Binding Model}" />
+                    <TextCell Detail="{Binding Model}" Text="{Binding Brand}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
 
             <!--  Demo: Use custom cells  -->
             <!--<ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Padding="5">
-                        <Label Text="{Binding Brand}" FontAttributes="Bold" />
-                        <Label Text="{Binding Model}" />
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>-->
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="5">
+                            <Label
+                                Text="{Binding Brand}"
+                                FontAttributes="Bold"
+                                FontSize="22" />
+                            <Label Text="{Binding Model}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>-->
         </ListView>
 
         <!--  Demo: BindableLayout  -->
@@ -42,5 +46,7 @@
                 </DataTemplate>
             </BindableLayout.ItemTemplate>
         </StackLayout>-->
+
+        <Button Command="{Binding UpdateCarCommand}" Text="Update Car" />
     </StackLayout>
 </ContentPage>

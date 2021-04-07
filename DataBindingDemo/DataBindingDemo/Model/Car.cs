@@ -8,7 +8,7 @@
 
         public override string ToString()
         {
-            return $"{this.Brand} {this.Model}";
+            return $"{{{this.Brand} {this.Model}}}";
         }
     }
 }
