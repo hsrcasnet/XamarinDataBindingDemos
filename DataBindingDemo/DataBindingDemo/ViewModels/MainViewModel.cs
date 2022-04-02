@@ -15,14 +15,8 @@ namespace DataBindingDemo.ViewModels
             this.navigationService = navigationService;
         }
 
-        public ICommand NavigateToPageCommand
-        {
-            get
-            {
-                return this.navigateToPageCommand ??
+        public ICommand NavigateToPageCommand => this.navigateToPageCommand ??
                        (this.navigateToPageCommand = new Command<string>(async (page) => await this.OnNavigateToPage(page)));
-            }
-        }
 
         private async Task OnNavigateToPage(string pageName)
         {

@@ -22,7 +22,7 @@ namespace DataBindingDemo.ViewModels
             this.UpdateCarCommand = new Command(() => this.UpdateCar());
 
             var cars = new List<Car>
-            {  
+            {
                 new Car
                 {
                     Brand = "Lamborghini",

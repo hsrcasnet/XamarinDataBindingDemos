@@ -102,15 +102,7 @@ namespace DataBindingDemo.ViewModels
             }
         }
 
-        public bool IsLoginButtonEnabled
-        {
-            get
-            {
-                return
-                    !this.IsLoggingIn &&
-                    this.AcceptTermsAndConditions;
-            }
-        }
+        public bool IsLoginButtonEnabled => !this.IsLoggingIn && this.AcceptTermsAndConditions;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
