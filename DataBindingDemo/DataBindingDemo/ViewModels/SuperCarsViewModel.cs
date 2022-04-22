@@ -15,10 +15,13 @@ namespace DataBindingDemo.ViewModels
 
         public ObservableCollection<CarViewModel> Cars { get; }
 
+        public ICommand AddCarCommand { get; }
+
         public ICommand UpdateCarCommand { get; }
 
         public SuperCarsViewModel()
         {
+            this.AddCarCommand = new Command(() => this.AddCar());
             this.UpdateCarCommand = new Command(() => this.UpdateCar());
 
             var cars = new List<Car>
@@ -40,6 +43,16 @@ namespace DataBindingDemo.ViewModels
             this.Cars = new ObservableCollection<CarViewModel>(carViewModels);
         }
 
+        private void AddCar()
+        {
+            var car = new Car
+            {
+                Brand = "Porsche",
+                Model = "911",
+            };
+            this.Cars.Add(new CarViewModel(car));
+        }
+        
         private void UpdateCar()
         {
             this.Cars[0].Brand = "Ferrari";
