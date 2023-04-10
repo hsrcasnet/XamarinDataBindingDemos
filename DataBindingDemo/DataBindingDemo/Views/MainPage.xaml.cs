@@ -11,6 +11,9 @@ namespace DataBindingDemo.Views
         public MainPage()
         {
             this.InitializeComponent();
+
+            // Demo: Manually create instance of MainViewModel and all its dependencies.
+            //       Is there a better way to connect a Page with its ViewModel?
             this.BindingContext = new MainViewModel(new NavigationService(this));
         }
     }
