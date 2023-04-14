@@ -77,6 +77,7 @@ namespace DataBindingDemo.ViewModels
             //           }
             //           else
             //           {
+            //               this.Password = string.Empty;
             //               this.dialogService.ShowAlert("Username or password is not valid.");
             //           }
             //       }
