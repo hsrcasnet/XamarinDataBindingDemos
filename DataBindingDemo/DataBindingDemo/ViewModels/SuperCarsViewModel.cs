@@ -11,14 +11,6 @@ namespace DataBindingDemo.ViewModels
 {
     public class SuperCarsViewModel : INotifyPropertyChanged
     {
-        public string Title { get; } = "Super Cars";
-
-        public ObservableCollection<CarViewModel> Cars { get; }
-
-        public ICommand AddCarCommand { get; }
-
-        public ICommand UpdateCarCommand { get; }
-
         public SuperCarsViewModel()
         {
             this.AddCarCommand = new Command(() => this.AddCar());
@@ -38,10 +30,18 @@ namespace DataBindingDemo.ViewModels
                 }
             };
 
-            var carViewModels = cars.Select(c => new CarViewModel(c));
+            var carItemViewModels = cars.Select(c => new CarItemViewModel(c));
 
-            this.Cars = new ObservableCollection<CarViewModel>(carViewModels);
+            this.Cars = new ObservableCollection<CarItemViewModel>(carItemViewModels);
         }
+
+        public string Title { get; } = "Super Cars";
+
+        public ObservableCollection<CarItemViewModel> Cars { get; }
+
+        public ICommand AddCarCommand { get; }
+
+        public ICommand UpdateCarCommand { get; }
 
         private void AddCar()
         {
@@ -50,7 +50,7 @@ namespace DataBindingDemo.ViewModels
                 Brand = "Porsche",
                 Model = "911",
             };
-            this.Cars.Add(new CarViewModel(car));
+            this.Cars.Add(new CarItemViewModel(car));
         }
         
         private void UpdateCar()
