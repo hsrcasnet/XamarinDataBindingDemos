@@ -12,14 +12,16 @@
             ItemTapped="Handle_ItemTapped"
             ItemsSource="{Binding Cars}">
 
-            <!--  Demo: Use built-in cells, e.g. TextCell  -->
-            <ListView.ItemTemplate>
+            <!-- Demo: Use built-in cells, e.g. TextCell -->
+            <!--<ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Detail="{Binding Model}" Text="{Binding Brand}" />
+                    <TextCell
+                        Detail="{Binding Model}"
+                        Text="{Binding Brand}" />
                 </DataTemplate>
-            </ListView.ItemTemplate>
+            </ListView.ItemTemplate>-->
 
-            <!--  Demo: Use custom cells  -->
+            <!-- Demo: Use custom cells -->
             <!--<ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -35,7 +37,7 @@
             </ListView.ItemTemplate>-->
         </ListView>
 
-        <!--  Demo: BindableLayout  -->
+        <!-- Demo: BindableLayout -->
         <!--<StackLayout BindableLayout.ItemsSource="{Binding Cars}" Orientation="Horizontal">
             <BindableLayout.ItemTemplate>
                 <DataTemplate>
@@ -47,6 +49,12 @@
             </BindableLayout.ItemTemplate>
         </StackLayout>-->
 
-        <Button Command="{Binding UpdateCarCommand}" Text="Update Car" />
+        <!--<Button
+            Command="{Binding UpdateCarCommand}"
+            Text="Update Car" />-->
+
+        <!--<Button
+            Command="{Binding AddCarCommand}"
+            Text="Add Car" />-->
     </StackLayout>
 </ContentPage>
