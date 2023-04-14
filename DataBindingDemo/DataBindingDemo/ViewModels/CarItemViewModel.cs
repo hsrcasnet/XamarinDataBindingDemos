@@ -4,11 +4,11 @@ using DataBindingDemo.Model;
 
 namespace DataBindingDemo.ViewModels
 {
-    public class CarViewModel : INotifyPropertyChanged
+    public class CarItemViewModel : INotifyPropertyChanged
     {
         private string brand;
 
-        public CarViewModel(Car car)
+        public CarItemViewModel(Car car)
         {
             this.Brand = car.Brand;
             this.Model = $"Model: {car.Model}";
